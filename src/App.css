@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main-wrapper {
+  width: 100vw;
+  height: 100vh;
+  background-color: #f8bbd0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+  position: relative;
+}
+
+.content-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+}
+
+/* --- SMOOTH PAGE TRANSITION --- */
+.animate-in {
+  animation: smooth-entry 0.7s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+}
+
+@keyframes smooth-entry {
+  0% { opacity: 0; transform: translateY(30px) scale(0.9); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.sticker {
+  width: 250px;
+  height: auto;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+/* Side-by-Side Stickers for Page 10 */
+.sticker-row {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.sticker-row .sticker {
+  width: 160px;
+  max-width: 45%;
+  margin-bottom: 0;
+}
+
+.main-text {
+  font-size: 1.5rem;
+  color: #ad1457;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.btn-group {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  width: 100%;
+}
+
+.action-btn {
+  background-color: #ffffff;
+  color: #ad1457;
+  border: 2px solid #ffffff;
+  padding: 12px 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+/* COLORED HOVER EFFECT */
+.action-btn:hover {
+  background-color: #ad1457;
+  color: #ffffff;
+  transform: scale(1.1);
+}
+
+.animate-success {
+  animation: bounce 1.2s infinite alternate;
+}
+
+@keyframes bounce {
+  from { transform: translateY(0); }
+  to { transform: translateY(-15px); }
+}
+
+@media (max-width: 480px) {
+  .main-text { font-size: 1.3rem; }
+  .action-btn { padding: 10px 25px; font-size: 0.9rem; }
+  .sticker-row .sticker { width: 130px; }
+}
+
+.signature {
+  position: absolute;
+  bottom: 10px;
+  font-size: 0.75rem;
+  color: #ad1457;
+  opacity: 0.5; /* Makes it subtle and elegant */
+  font-family: sans-serif;
+  width: 100%;
+  text-align: center;
+}
+
+/* Instagram Button Styling */
+.insta-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #ffffff;
+  color: #ad1457;
+  text-decoration: none;
+  padding: 12px 25px;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  margin-top: 10px;
+  border: 2px solid #ffffff;
+}
+
+.insta-btn:hover {
+  background-color: #ad1457; /* Flipped Colors */
+  color: #ffffff;
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(173, 20, 87, 0.3);
+}
+
+.insta-icon {
+  width: 20px;
+  height: 20px;
+}
